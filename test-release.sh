@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "Running tests on: $1"
 FAIL_COUNT=0
 
 # stack-protector add function call to '__stack_chk_fail'. Test if this name exist.
