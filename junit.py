@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import argparse
 import os
@@ -55,4 +55,3 @@ if __name__ == "__main__":
                 ofile.write(generate_junit_xml(ifile))
         else:
             print(generate_junit_xml(ifile))
-            
