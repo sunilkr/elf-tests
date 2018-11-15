@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+#echo "[!] Target : $1"
+echo "[!] Group: DEBUG"
 FAIL_COUNT=0
 
 # stack-protector add function call to '__stack_chk_fail'. Test if this name exist.
@@ -30,7 +32,7 @@ elif readelf -h "$1" 2>/dev/null | grep -q 'Type:[[:space:]]*DYN'; then
     if readelf -d "$1" 2>/dev/null | grep -q 'DEBUG'; then
         echo "(+) PIE Enabled: Yes"
     else
-        echo "(+) PIE Enabled: DSO"
+        echo "[+] PIE Enabled: Yes"
     fi
 else
     echo "(*) PIE Enabled: Not-ELF"
